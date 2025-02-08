@@ -1,252 +1,283 @@
-.custom.controller, .custom.controller::after {
-  background: url(https://imgur.com/QiJs56o.png) no-repeat;
-  background-size: cover;
+/*BEGIN PS4 Controller Styling*/
+.controller.ds4 {
+  background: url(base.svgz);
+  height: 598px;
   width: 806px;
-  height: 598.90002px;
-}
-.custom.controller.disconnected {
-  opacity: 0.75;
-}
-.custom.controller.disconnected::after {
-  content: '';
-  background: url(https://imgur.com/TwoCsRR.png) no-repeat;
-  position: absolute;
-  opacity: 0.5;
+  /*    margin-left: -403px;
+        margin-top: -280px;*/
 }
 
-
-.custom .triggers {
-  position: absolute;
-  width: 588.5px;
-  height: 90.8px;
-  left: 108.7px;
+.ds4.disconnected {
+  background: url(disconnected.svgz);
 }
-.custom .trigger {
+
+.ds4.disconnected div {
+  display: none;
+}
+
+.ds4 .triggers {
+  width: 588px;
+  height: 90px;
   position: absolute;
+  left: 109px;
+}
+
+.ds4 .trigger {
   width: 99px;
-  height: 90.8px;
-  background: url(triggers.svg) no-repeat;
-  background-size: 200px 90.8px;
+  height: 100%;
+  background: url(triggers.svgz);
   opacity: 0;
 }
-.custom .triggers::before, .custom .triggers::after {
-  content: '';
-  position: absolute;
-  width: 99px;
-  height: 90.8px;
-  top: 0;
-  background: url(https://imgur.com/zfjzGmT.png) no-repeat;
-  background-size: 200px 90.8px;
-  filter: hue-rotate(40deg);
-  z-index: -1;
-}
-.custom .triggers::before {
-  left: 0;
-}
-.custom .triggers::after {
-  right: 0;
-  background-position-x: -101px;
-}
-.custom .trigger.left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.custom .trigger.right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-position-x: -101px;
-}
 
-
-.custom .bumper {
-  width: 98.9px;
-  height: 22.4px;
-  background: url(https://imgur.com/xlSn7f3.png) no-repeat;
-  filter: hue-rotate(40deg);
-}
-.custom .bumpers {
-  position: absolute;
-  width: 588.4px;
-  height: 22.4px;
-  left: 108.8px;
-  top: 94.4px;
-}
-.custom .bumper.pressed {
-  filter: initial;
-}
-.custom .bumper.left {
+.ds4 .trigger.left {
   float: left;
 }
-.custom .bumper.right {
+
+.ds4 .trigger.right {
+  float: right;
+  background-position-x: 99px;
+}
+
+.ds4 .bumper {
+  width: 99px;
+  height: 23px;
+  background: url(bumper.svgz) no-repeat;
+  opacity: 0;
+}
+
+.ds4 .bumpers {
+  position: absolute;
+  width: 588px;
+  height: 23px;
+  left: 109px;
+  top: 94px;
+}
+
+.ds4 .bumper.pressed {
+  opacity: 1;
+}
+
+.ds4 .bumper.left {
+  /* -webkit-transform: rotateY(180deg); */
+  /* transform: rotateY(180deg); */
+  float: left;
+}
+
+.ds4 .bumper.right {
   float: right;
   transform: rotateY(180deg);
 }
 
-
-.custom .touchpad {
+.ds4 .touchpad {
+  width: 262px;
+  height: 151px;
   position: absolute;
-  width: 263.841px;
-  height: 151.2px;
-  left: 271.1px;
-  top: 122.4px;
-  background: url(touchpad.svg) no-repeat center;
-  background-size: cover;
-  filter: hue-rotate(250deg);
-}
-.custom .touchpad.pressed {
-  filter: initial;
+  left: 272px;
+  top: 122px;
 }
 
+.ds4 .touchpad.pressed {
+  background: url(touchpad.svgz) no-repeat center;
+}
 
-.custom .meta {
+.ds4 .meta {
+  width: 42px;
+  height: 42px;
   position: absolute;
-  width: 42.4px;
-  height: 42.4px;
-  left: 381.8px;
-  top: 340.8px;
-  background: url(meta.svg) no-repeat center;
-  filter: invert(1);
-}
-.custom .meta.pressed {
-  filter: initial;
+  left: 382px;
+  bottom: 216px;
 }
 
-
-.custom .arrows {
-  position: absolute;
-  width: 353.4px;
-  height: 46.7px;
-  top: 141.8px;
-  left: 226.3px;
-}
-.custom .back, .custom .start {
-  position: absolute;
-  width: 28.4px;
-  height: 46.7px;
-  top: 0;
-  background: url(https://imgur.com/NnpQ8gU.png) no-repeat;
-  background-size: 28.4px 46.7px;
-  filter: hue-rotate(180deg) saturate(0.5) brightness(1.5);
-}
-.custom .back.pressed, .custom .start.pressed {
-  filter: initial;
-}
-.custom .back {
-  left: 0;
-}
-.custom .start {
-  right: 0;
+.ds4 .meta.pressed {
+  background: url(meta.svgz) no-repeat center;
 }
 
+/*Not needed, but I like keeping them here for posterity*/
+/*.ds4 .quadrant{
+position: absolute;
+background: url(player-n.svgz);
+height: 17px;
+width: 111px;
+top: 140px;
+left: 240px;
+}
+.ds4 .p0{
+background-position: 0 -6px;
+}
+.ds4 .p1{
+background-position: 0 -28px;
+}
+.ds4 .p2{
+background-position: 0 -49px;
+}
+.ds4 .p3{
+background-position: 0 -70px;
+}*/
+.ds4 .arrows {
+  position: absolute;
+  width: 352px;
+  height: 46px;
+  top: 142px;
+  left: 227px;
+}
 
-.custom .abxy {
+.ds4 .back,
+.ds4 .start {
+  background: url(start.svgz);
+  width: 28px;
+  height: 46px;
+  opacity: 0;
+}
+
+.ds4 .back.pressed,
+.ds4 .start.pressed {
+  /* background-position-y: -21px; */
+  /* margin-top: 2px; */
+  opacity: 1;
+}
+
+.ds4 .back {
+  float: left;
+  /* width: 28px; */
+}
+
+.ds4 .start {
+  float: right;
+  /* width: 28px; */
+  background-position: 28px 0;
+}
+
+.ds4 .abxy {
   position: absolute;
-  width: 169.8px;
-  height: 169.7px;
-  top: 160px;
-  left: 567.4px;
+  width: 170px;
+  height: 171px;
+  top: 159px;
+  left: 567px;
 }
-.custom .button {
+
+.ds4 .button {
   position: absolute;
-  width: 54.6px;
-  height: 54.6px;
-  background: url(https://imgur.com/N8o0Z83.png) no-repeat;
-  background-size: 224.0px 112.3px;
+  width: 55px;
+  height: 55px;
+  background: url(face.svgz);
 }
-.custom .button.pressed {
-  background-position-y: -57.7px;
+
+.ds4 .button.pressed {
+  background-position-y: 55px;
+  /* margin-top: 5px; */
 }
-.custom .a {
+
+.ds4 .a {
   background-position: 0 0;
   bottom: 0;
-  left: 57.6px;
-}
-.custom .b {
-  background-position: -56.5px 0;
-  top: 57.5px;
-  right: 0;
-}
-.custom .x {
-  background-position: -112.9px 0;
-  top: 57.5px;
-}
-.custom .y {
-  background-position: -169.4px 0;
-  left: 57.6px;
+  left: 58px;
 }
 
-
-.custom .sticks {
-  position: absolute;
-  width: 350.6px;
-  height: 94px;
-  top: 309px;
-  left: 227.7px;
+.ds4 .b {
+  background-position: -57px 0;
+  top: 58px;
+  right: 0px;
 }
-.custom .stick {
+
+.ds4 .x {
+  background-position: -113px 0;
+  top: 58px;
+}
+
+.ds4 .y {
+  background-position: 55px 0;
+  left: 58px;
+}
+
+.ds4 .sticks {
   position: absolute;
-  background: url(https://imgur.com/dIsnoF1.png) no-repeat;
+  width: 361px;
+  height: 105px;
+  top: 308px;
+  left: 228px;
+}
+
+.ds4 .stick {
+  position: absolute;
+  background: url(sticks.svgz);
   height: 94px;
   width: 94px;
 }
-.custom .stick.pressed.left {
+
+.ds4 .stick.pressed.left {
   background-position-x: -96px;
 }
-.custom .stick.pressed.right {
+
+.ds4 .stick.pressed.right {
   background-position-x: -192px;
 }
-.custom .stick.left {
+
+.ds4 .stick.left {
   top: 0;
   left: 0;
 }
-.custom .stick.right {
-  top: 0;
-  left: calc(100% - 94px);
+
+.ds4 .stick.right {
+  top: calc(100% - 105px);
+  left: calc(100% - 105px);
 }
 
+.ds4 .dpad {
+  position: absolute;
+  width: 125px;
+  height: 126px;
+  top: 181px;
+  left: 92px;
+}
 
-.custom .dpad {
-  position: absolute;
-  width: 125.818px;
-  height: 125.918px;
-  top: 181.391px;
-  left: 90.991px;
-}
-.custom .face {
-  background: url(https://imgur.com/R6s8CH0.png) no-repeat;
-  background-size: 180.0px 108.0px;
+.ds4 .face {
+  background: url(dpad.svgz);
   position: absolute;
 }
-.custom .face.up, .custom .face.down {
-  width: 36.437px;
-  height: 51.919px;
+
+.ds4 .face.up,
+.ds4 .face.down {
+  width: 36px;
+  height: 52px;
 }
-.custom .face.left, .custom .face.right {
-  width: 51.919px;
-  height: 36.437px;
+
+.ds4 .face.left,
+.ds4 .face.right {
+  width: 52px;
+  height: 36px;
 }
-.custom .face.up {
-  left: 44.691px;
+
+.ds4 .face.up {
+  left: 44px;
   top: 0;
-  background-position: -37.533px 0px;
+  background-position: -37px 0px;
 }
-.custom .face.down {
-  left: 44.691px;
+
+.ds4 .face.down {
+  left: 44px;
   bottom: 0;
-  background-position: 0px 0px;
+  background-position: 0px 0;
 }
-.custom .face.left {
-  top: 44.691px;
+
+.ds4 .face.left {
+  top: 45px;
   left: 0;
-  background-position: -75.066px 0px;
+  background-position: 104px 0;
 }
-.custom .face.right {
-  top: 44.791px;
+
+.ds4 .face.right {
+  top: 45px;
   right: 0px;
-  background-position: -128.081px 0px;
+  background-position: 52px 0;
 }
-.custom .face.pressed {
-  background-position-y: -56.081px;
+
+.ds4 .face.pressed {
+  /* margin-top: 5px; */
+  background-position-y: 52px;
 }
+
+.ds4.half {
+  margin-top: -300px;
+}
+
+/*END PS4 Controller Styling*/
